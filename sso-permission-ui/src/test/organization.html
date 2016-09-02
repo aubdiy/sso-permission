@@ -9,10 +9,12 @@
 
     <title>SSO-Permission! | </title>
 
-
+    <link href="css/custom.css" rel="stylesheet">
     <link href="z-public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="z-public/gentelella/css/gentelella.min.css" rel="stylesheet">
     <link href="z-public/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="z-public/ztree/css/zTreeStyle/zTreeStyle.css" rel="stylesheet">
+
 </head>
 
 <body class="nav-md footer_fixed">
@@ -46,13 +48,13 @@
                     <div class="menu_section">
                         <h3>&nbsp;</h3>
                         <ul class="nav side-menu">
-                            <li><a><i class="fa fa-users"></i> 用户管理 </a></li>
+                            <li><a href="user.html"><i class="fa fa-users"></i> 用户管理 </a></li>
                         </ul>
                         <ul class="nav side-menu">
-                            <li><a><i class="fa fa-sitemap"></i> 组织管理 </a></li>
+                            <li><a href="organization.html"><i class="fa fa-sitemap"></i> 组织管理 </a></li>
                         </ul>
                         <ul class="nav side-menu">
-                            <li><a><i class="fa fa-paw"></i> 角色管理 </a></li>
+                            <li><a href="role.html"><i class="fa fa-paw"></i> 角色管理 </a></li>
                         </ul>
                         <ul class="nav side-menu">
                             <li><a><i class="fa fa-gift"></i> 资源管理 </a></li>
@@ -77,51 +79,77 @@
             </div>
         </div>
 
-        <!-- top navigation -->
-        <div class="top_nav">
-            <div class="nav_menu">
-                <nav>
-                    <div class="nav toggle">
-                        ASDF
-
-                    </div>
-                </nav>
-            </div>
-        </div>
-        <!-- /top navigation -->
 
         <!-- page content -->
         <div class="right_col" role="main">
-            AAAAAAAAAA
-        </div>
-        <!-- /page content -->
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>组织管理</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_content">
+                            <div class="col-md-4 col-sm-12 col-xs-12">
+                                <ul id="treeDemo" class="ztree"></ul>
+                                
+                            </div>
 
-        <!-- footer content -->
-        <footer>
-            <div class="pull-left" style="margin-left: 230px;">
-                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                            <div class="col-md-8 col-sm-12 col-xs-12">
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="pull-right">
-                Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-            </div>
-            <div class="clearfix"></div>
-        </footer>
-        <!-- /footer content -->
+        </div>
     </div>
+    <!-- /page content -->
+
+    <!-- footer content -->
+    <footer>
+        <div class="pull-left" style="margin-left: 230px;">
+            <span id="menu_toggle" style="cursor:pointer"><i class="fa fa-bars"></i></span>
+        </div>
+        <div class="pull-right">
+            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+        </div>
+        <div class="clearfix"></div>
+    </footer>
+    <!-- /footer content -->
+</div>
 </div>
 
 
 <script src="z-public/jquery/jquery.min.js"></script>
 <script src="z-public/bootstrap/js/bootstrap.min.js"></script>
 <script src="z-public/gentelella/js/custom.min.js"></script>
+<script src="z-public/ztree/js/jquery.ztree.all.min.js"></script>
 <script>
-    $('#menu_toggle').on('click',function(){
+    $('#menu_toggle').on('click', function () {
         var ele = $(this).parent();
-       if(ele.attr('style') === 'margin-left: 230px;'){
-           ele.attr('style','margin-left: 70px;');
-       }else{
-           ele.attr('style','margin-left: 230px;');
-       }
+        if (ele.attr('style') === 'margin-left: 230px;') {
+            ele.attr('style', 'margin-left: 70px;');
+        } else {
+            ele.attr('style', 'margin-left: 230px;');
+        }
+
+    });
+
+    var zTreeObj;
+    // zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
+    var setting = {};
+    // zTree 的数据属性，深入使用请参考 API 文档（zTreeNode 节点数据详解）
+    var zNodes = [
+        {name:"test1", open:true, children:[
+            {name:"test1_1"}, {name:"test1_2"}]},
+        {name:"test2", open:true, children:[
+            {name:"test2_1"}, {name:"test2_2"}]}
+    ];
+    $(document).ready(function(){
+        zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
     });
 
 </script>

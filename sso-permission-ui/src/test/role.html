@@ -52,7 +52,7 @@
                             <li><a><i class="fa fa-sitemap"></i> 组织管理 </a></li>
                         </ul>
                         <ul class="nav side-menu">
-                            <li><a><i class="fa fa-paw"></i> 角色管理 </a></li>
+                            <li><a href="role.html"><i class="fa fa-paw"></i> 角色管理 </a></li>
                         </ul>
                         <ul class="nav side-menu">
                             <li><a><i class="fa fa-gift"></i> 资源管理 </a></li>
@@ -82,50 +82,17 @@
         <div class="right_col" role="main">
             <div class="page-title">
                 <div class="title_left">
-                    <h3>系统管理</h3>
+                    <h3>角色管理</h3>
                 </div>
             </div>
             <div class="row">
-                <!--<div class="col-md-12 col-sm-12 col-xs-12">-->
-                <!--<div class="x_panel" style="height: auto;">-->
-                <!--<div class="x_title">-->
-                <!--<button type="button" class="btn btn-success btn-xs">新增</button>-->
-
-                <!--<ul class="nav navbar-right panel_toolbox">-->
-                <!--<li><a class="collapse-link">高级搜索<i class="fa fa-chevron-down"></i></a>-->
-                <!--</li>-->
-                <!--</ul>-->
-                <!--<div class="clearfix"></div>-->
-                <!--</div>-->
-                <!--<div class="x_content" style="display: none;">-->
-                <!--<form class="form-inline  form-label-left input_mask" role="form">-->
-                <!--<div class="form-group">-->
-                <!--<label class="sr-only" for="exampleInputEmail2">系统名称</label>-->
-                <!--<input type="email" class="form-control" id="exampleInputEmail2" placeholder="系统名称">-->
-                <!--</div>-->
-                <!--<div class="form-group">-->
-                <!--<label class="sr-only" for="exampleInputPassword2">最后操作者</label>-->
-                <!--<input type="password" class="form-control" id="exampleInputPassword2" placeholder="最后操作者">-->
-                <!--</div>-->
-                <!--<div class="checkbox">-->
-                <!--<label>-->
-                <!--<input type="checkbox"> Remember me-->
-                <!--</label>-->
-                <!--</div>-->
-                <!--<button type="submit" class="btn btn-default">Sign in</button>-->
-                <!--</form>-->
-
-                <!--</div>-->
-                <!--</div>-->
-                <!--</div>-->
-
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_content">
                             <form class="form-inline  form-label-left input_mask text-right" role="form">
                                 <div class="form-group">
-                                    <label class="sr-only">系统名称</label>
-                                    <input type="email" class="form-control" placeholder="系统名称">
+                                    <label class="sr-only">角色名称</label>
+                                    <input type="email" class="form-control" placeholder="角色名称">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only">最后操作者</label>
@@ -135,8 +102,8 @@
                                     <label class="sr-only">状态</label>
                                     <select class="form-control">
                                         <option>全部</option>
-                                        <option>在线</option>
-                                        <option>离线</option>
+                                        <option>启用</option>
+                                        <option>停用</option>
                                     </select>
                                 </div>
                                 <button type="button" class="btn btn-info btn-sm">查询</button>
@@ -149,7 +116,7 @@
                                     <thead>
                                     <tr class="headings">
                                         <th class="">ID</th>
-                                        <th class="">系统名称</th>
+                                        <th class="">角色名称</th>
                                         <th class="">状态</th>
                                         <th class="">创建者</th>
                                         <th class="">创建时间</th>
@@ -163,75 +130,75 @@
                                     <tbody>
                                     <tr class="even pointer">
                                         <td class="">1</td>
-                                        <td class="">API网关</td>
-                                        <td class=""><span class="badge badge-success">在线</span></td>
+                                        <td class="">系统管理员</td>
+                                        <td class=""><span class="badge badge-success">启用</span></td>
                                         <td class="">AUB</td>
                                         <td class="">2016-09-01 11:11:11</td>
                                         <td class="">AUB</td>
                                         <td class="">2016-09-01 11:11:11</td>
                                         <td class="">XXX</td>
                                         <td class="text-right">
-                                            <button type="button" class="btn btn-info btn-xs">查看</button>
+                                            <button type="button" class="btn btn-info btn-xs">分配资源</button>
                                             <button type="button" class="btn btn-warning btn-xs">修改</button>
                                             <button type="button" class="btn btn-danger btn-xs">删除</button>
                                         </td>
                                     </tr>
                                     <tr class="even pointer">
                                         <td class="">2</td>
-                                        <td class="">配置中心</td>
-                                        <td class=""><span class="badge badge-success">在线</span></td>
+                                        <td class="">普通管理员</td>
+                                        <td class=""><span class="badge badge-success">启用</span></td>
                                         <td class="">AUB</td>
                                         <td class="">2016-09-01 11:11:11</td>
                                         <td class="">AUB</td>
                                         <td class="">2016-09-01 11:11:11</td>
                                         <td class="">XXX</td>
                                         <td class="text-right">
-                                            <button type="button" class="btn btn-info btn-xs">查看</button>
+                                            <button type="button" class="btn btn-info btn-xs">分配资源</button>
                                             <button type="button" class="btn btn-warning btn-xs">修改</button>
                                             <button type="button" class="btn btn-danger btn-xs">删除</button>
                                         </td>
                                     </tr>
                                     <tr class="even pointer">
                                         <td class="">3</td>
-                                        <td class="">调度中心</td>
-                                        <td class=""><span class="badge badge-success">在线</span></td>
+                                        <td class="">普通用户</td>
+                                        <td class=""><span class="badge badge-success">启用</span></td>
                                         <td class="">AUB</td>
                                         <td class="">2016-09-01 11:11:11</td>
                                         <td class="">AUB</td>
                                         <td class="">2016-09-01 11:11:11</td>
                                         <td class="">XXX</td>
                                         <td class="text-right">
-                                            <button type="button" class="btn btn-info btn-xs">查看</button>
+                                            <button type="button" class="btn btn-info btn-xs">分配资源</button>
                                             <button type="button" class="btn btn-warning btn-xs">修改</button>
                                             <button type="button" class="btn btn-danger btn-xs">删除</button>
                                         </td>
                                     </tr>
                                     <tr class="even pointer">
                                         <td class="">4</td>
-                                        <td class="">日志服务</td>
-                                        <td class=""><span class="badge badge-danger">离线</span></td>
+                                        <td class="">产品经理</td>
+                                        <td class=""><span class="badge badge-danger">停用</span></td>
                                         <td class="">AUB</td>
                                         <td class="">2016-09-01 11:11:11</td>
                                         <td class="">AUB</td>
                                         <td class="">2016-09-01 11:11:11</td>
                                         <td class="">XXX</td>
                                         <td class="text-right">
-                                            <button type="button" class="btn btn-info btn-xs">查看</button>
+                                            <button type="button" class="btn btn-info btn-xs">分配资源</button>
                                             <button type="button" class="btn btn-warning btn-xs">修改</button>
                                             <button type="button" class="btn btn-danger btn-xs">删除</button>
                                         </td>
                                     </tr>
                                     <tr class="even pointer">
                                         <td class="">5</td>
-                                        <td class="">故障监控</td>
-                                        <td class=""><span class="badge badge-danger">离线</span></td>
+                                        <td class="">测试经理</td>
+                                        <td class=""><span class="badge badge-danger">停用</span></td>
                                         <td class="">AUB</td>
                                         <td class="">2016-09-01 11:11:11</td>
                                         <td class="">AUB</td>
                                         <td class="">2016-09-01 11:11:11</td>
                                         <td class="">XXX</td>
                                         <td class="text-right">
-                                            <button type="button" class="btn btn-info btn-xs">查看</button>
+                                            <button type="button" class="btn btn-info btn-xs">分配资源</button>
                                             <button type="button" class="btn btn-warning btn-xs">修改</button>
                                             <button type="button" class="btn btn-danger btn-xs">删除</button>
                                         </td>

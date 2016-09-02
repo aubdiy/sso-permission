@@ -46,13 +46,13 @@
                     <div class="menu_section">
                         <h3>&nbsp;</h3>
                         <ul class="nav side-menu">
-                            <li><a><i class="fa fa-users"></i> 用户管理 </a></li>
+                            <li><a href="user.html"><i class="fa fa-users"></i> 用户管理 </a></li>
                         </ul>
                         <ul class="nav side-menu">
                             <li><a><i class="fa fa-sitemap"></i> 组织管理 </a></li>
                         </ul>
                         <ul class="nav side-menu">
-                            <li><a><i class="fa fa-paw"></i> 角色管理 </a></li>
+                            <li><a href="role.html"><i class="fa fa-paw"></i> 角色管理 </a></li>
                         </ul>
                         <ul class="nav side-menu">
                             <li><a><i class="fa fa-gift"></i> 资源管理 </a></li>
@@ -82,61 +82,28 @@
         <div class="right_col" role="main">
             <div class="page-title">
                 <div class="title_left">
-                    <h3>系统管理</h3>
+                    <h3>用户管理</h3>
                 </div>
             </div>
             <div class="row">
-                <!--<div class="col-md-12 col-sm-12 col-xs-12">-->
-                <!--<div class="x_panel" style="height: auto;">-->
-                <!--<div class="x_title">-->
-                <!--<button type="button" class="btn btn-success btn-xs">新增</button>-->
-
-                <!--<ul class="nav navbar-right panel_toolbox">-->
-                <!--<li><a class="collapse-link">高级搜索<i class="fa fa-chevron-down"></i></a>-->
-                <!--</li>-->
-                <!--</ul>-->
-                <!--<div class="clearfix"></div>-->
-                <!--</div>-->
-                <!--<div class="x_content" style="display: none;">-->
-                <!--<form class="form-inline  form-label-left input_mask" role="form">-->
-                <!--<div class="form-group">-->
-                <!--<label class="sr-only" for="exampleInputEmail2">系统名称</label>-->
-                <!--<input type="email" class="form-control" id="exampleInputEmail2" placeholder="系统名称">-->
-                <!--</div>-->
-                <!--<div class="form-group">-->
-                <!--<label class="sr-only" for="exampleInputPassword2">最后操作者</label>-->
-                <!--<input type="password" class="form-control" id="exampleInputPassword2" placeholder="最后操作者">-->
-                <!--</div>-->
-                <!--<div class="checkbox">-->
-                <!--<label>-->
-                <!--<input type="checkbox"> Remember me-->
-                <!--</label>-->
-                <!--</div>-->
-                <!--<button type="submit" class="btn btn-default">Sign in</button>-->
-                <!--</form>-->
-
-                <!--</div>-->
-                <!--</div>-->
-                <!--</div>-->
-
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_content">
                             <form class="form-inline  form-label-left input_mask text-right" role="form">
                                 <div class="form-group">
-                                    <label class="sr-only">系统名称</label>
-                                    <input type="email" class="form-control" placeholder="系统名称">
+                                    <label class="sr-only">登陆账号</label>
+                                    <input type="email" class="form-control" placeholder="登陆账号">
                                 </div>
                                 <div class="form-group">
-                                    <label class="sr-only">最后操作者</label>
-                                    <input type="password" class="form-control" placeholder="最后操作者">
+                                    <label class="sr-only">用户名称</label>
+                                    <input type="password" class="form-control" placeholder="用户名称">
                                 </div>
                                 <div class="form-group">
                                     <label class="sr-only">状态</label>
                                     <select class="form-control">
                                         <option>全部</option>
-                                        <option>在线</option>
-                                        <option>离线</option>
+                                        <option>在职</option>
+                                        <option>离职</option>
                                     </select>
                                 </div>
                                 <button type="button" class="btn btn-info btn-sm">查询</button>
@@ -149,12 +116,14 @@
                                     <thead>
                                     <tr class="headings">
                                         <th class="">ID</th>
-                                        <th class="">系统名称</th>
+                                        <th class="">登陆账号</th>
+                                        <th class="">用户名称</th>
                                         <th class="">状态</th>
-                                        <th class="">创建者</th>
-                                        <th class="">创建时间</th>
-                                        <th class="">最后操作者</th>
-                                        <th class="">最后操作时间</th>
+                                        <th class="">所属组</th>
+                                        <th class="">职位</th>
+                                        <th class="">性别</th>
+                                        <th class="">手机号</th>
+                                        <th class="">入职日期</th>
                                         <th class="">备注</th>
                                         <th class="text-center">操作</th>
                                     </tr>
@@ -163,12 +132,14 @@
                                     <tbody>
                                     <tr class="even pointer">
                                         <td class="">1</td>
-                                        <td class="">API网关</td>
-                                        <td class=""><span class="badge badge-success">在线</span></td>
-                                        <td class="">AUB</td>
-                                        <td class="">2016-09-01 11:11:11</td>
-                                        <td class="">AUB</td>
-                                        <td class="">2016-09-01 11:11:11</td>
+                                        <td class="">aaa</td>
+                                        <td class="">张三</td>
+                                        <td class=""><span class="badge badge-success">在职</span></td>
+                                        <td class="">研发中心</td>
+                                        <td class="">研发经理</td>
+                                        <td class="">男</td>
+                                        <td class="">11011233456</td>
+                                        <td class="">2016-09-01</td>
                                         <td class="">XXX</td>
                                         <td class="text-right">
                                             <button type="button" class="btn btn-info btn-xs">查看</button>
@@ -178,12 +149,14 @@
                                     </tr>
                                     <tr class="even pointer">
                                         <td class="">2</td>
-                                        <td class="">配置中心</td>
-                                        <td class=""><span class="badge badge-success">在线</span></td>
-                                        <td class="">AUB</td>
-                                        <td class="">2016-09-01 11:11:11</td>
-                                        <td class="">AUB</td>
-                                        <td class="">2016-09-01 11:11:11</td>
+                                        <td class="">bbb</td>
+                                        <td class="">李四</td>
+                                        <td class=""><span class="badge badge-success">在职</span></td>
+                                        <td class="">研发中心</td>
+                                        <td class="">研发经理</td>
+                                        <td class="">男</td>
+                                        <td class="">11011233456</td>
+                                        <td class="">2016-09-01</td>
                                         <td class="">XXX</td>
                                         <td class="text-right">
                                             <button type="button" class="btn btn-info btn-xs">查看</button>
@@ -193,12 +166,14 @@
                                     </tr>
                                     <tr class="even pointer">
                                         <td class="">3</td>
-                                        <td class="">调度中心</td>
-                                        <td class=""><span class="badge badge-success">在线</span></td>
-                                        <td class="">AUB</td>
-                                        <td class="">2016-09-01 11:11:11</td>
-                                        <td class="">AUB</td>
-                                        <td class="">2016-09-01 11:11:11</td>
+                                        <td class="">ccc</td>
+                                        <td class="">王五</td>
+                                        <td class=""><span class="badge badge-success">在职</span></td>
+                                        <td class="">研发中心</td>
+                                        <td class="">研发经理</td>
+                                        <td class="">男</td>
+                                        <td class="">11011233456</td>
+                                        <td class="">2016-09-01</td>
                                         <td class="">XXX</td>
                                         <td class="text-right">
                                             <button type="button" class="btn btn-info btn-xs">查看</button>
@@ -208,12 +183,14 @@
                                     </tr>
                                     <tr class="even pointer">
                                         <td class="">4</td>
-                                        <td class="">日志服务</td>
-                                        <td class=""><span class="badge badge-danger">离线</span></td>
-                                        <td class="">AUB</td>
-                                        <td class="">2016-09-01 11:11:11</td>
-                                        <td class="">AUB</td>
-                                        <td class="">2016-09-01 11:11:11</td>
+                                        <td class="">ddd</td>
+                                        <td class="">陈六</td>
+                                        <td class=""><span class="badge badge-danger">离职</span></td>
+                                        <td class="">研发中心</td>
+                                        <td class="">研发经理</td>
+                                        <td class="">男</td>
+                                        <td class="">11011233456</td>
+                                        <td class="">2016-09-01</td>
                                         <td class="">XXX</td>
                                         <td class="text-right">
                                             <button type="button" class="btn btn-info btn-xs">查看</button>
@@ -221,21 +198,7 @@
                                             <button type="button" class="btn btn-danger btn-xs">删除</button>
                                         </td>
                                     </tr>
-                                    <tr class="even pointer">
-                                        <td class="">5</td>
-                                        <td class="">故障监控</td>
-                                        <td class=""><span class="badge badge-danger">离线</span></td>
-                                        <td class="">AUB</td>
-                                        <td class="">2016-09-01 11:11:11</td>
-                                        <td class="">AUB</td>
-                                        <td class="">2016-09-01 11:11:11</td>
-                                        <td class="">XXX</td>
-                                        <td class="text-right">
-                                            <button type="button" class="btn btn-info btn-xs">查看</button>
-                                            <button type="button" class="btn btn-warning btn-xs">修改</button>
-                                            <button type="button" class="btn btn-danger btn-xs">删除</button>
-                                        </td>
-                                    </tr>
+
                                     </tbody>
                                 </table>
                                 <div>
