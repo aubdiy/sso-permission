@@ -13,7 +13,8 @@
     <link href="z-public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="z-public/gentelella/css/gentelella.min.css" rel="stylesheet">
     <link href="z-public/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="z-public/ztree/css/zTreeStyle/zTreeStyle.css" rel="stylesheet">
+    <!--<link href="z-public/ztree/css/zTreeStyle/zTreeStyle.css" rel="stylesheet">-->
+    <link href="z-public/ztree/css/metroStyle/metroStyle.css" rel="stylesheet">
 
 </head>
 
@@ -57,10 +58,10 @@
                             <li><a href="role.html"><i class="fa fa-paw"></i> 角色管理 </a></li>
                         </ul>
                         <ul class="nav side-menu">
-                            <li><a><i class="fa fa-gift"></i> 资源管理 </a></li>
+                            <li><a href="resource.html"><i class="fa fa-gift"></i> 资源管理 </a></li>
                         </ul>
                         <ul class="nav side-menu">
-                            <li><a href="system.html"><i class="fa fa-joomla"></i> 系统管理 </a></li>
+                            <li><a href="xSystem.html"><i class="fa fa-joomla"></i> 系统管理 </a></li>
                         </ul>
 
                     </div>
@@ -88,16 +89,236 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-3 col-sm-3 col-xs-12">
                     <div class="x_panel">
+                        <div class="x_title">
+                            <h4>组织结构</h4>
+                        </div>
                         <div class="x_content">
-                            <div class="col-md-4 col-sm-12 col-xs-12">
+                            <div class="slim-scroll fixed_height_560">
                                 <ul id="treeDemo" class="ztree"></ul>
-                                
                             </div>
+                        </div>
 
-                            <div class="col-md-8 col-sm-12 col-xs-12">
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-9 col-xs-12">
+                    <div class="row">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h4>详细信息</h4>
+                            </div>
+                            <div class="x_content">
+                                <div class="table-responsive">
+                                    <table class="table table-striped jambo_table bulk_action">
+                                        <thead>
+                                        <tr class="headings">
+                                            <th class="">ID</th>
+                                            <th class="">组织名称</th>
+                                            <th class="">创建者</th>
+                                            <th class="">创建时间</th>
+                                            <th class="">最后操作者</th>
+                                            <th class="">最后操作时间</th>
+                                            <th class="">备注</th>
+                                            <th class="text-center">操作</th>
+                                        </tr>
+                                        </thead>
 
+                                        <tbody>
+                                        <tr class="even pointer">
+                                            <td>1</td>
+                                            <td>数据中心</td>
+                                            <td>AUB</td>
+                                            <td>2016-01-01 11:11:11</td>
+                                            <td>AUB</td>
+                                            <td>2016-01-01 11:11:11</td>
+                                            <td>XX</td>
+                                            <td class="text-right">
+                                                <button type="button" class="btn btn-warning btn-xs">修改</button>
+                                                <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h4 class="x_title_left">所含角色</h4>
+                                        <div class="pull-right">
+                                        <button class="btn btn-info btn-xs ">授权角色</button>
+
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+
+                                    <div class="x_content ">
+                                        <div class="table-responsive slim-scroll fixed_height_360">
+                                            <table class="table table-striped jambo_table bulk_action">
+                                                <thead>
+                                                <tr class="headings">
+                                                    <th class="">ID</th>
+                                                    <th class="">角色名称</th>
+                                                    <th class="">备注</th>
+                                                    <th class="text-center">操作</th>
+                                                </tr>
+                                                </thead>
+
+                                                <tbody >
+                                                <tr class="even pointer">
+                                                    <td>1</td>
+                                                    <td>总经理</td>
+                                                    <td>XX</td>
+                                                    <td class="text-center">
+                                                        <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                    </td>
+                                                </tr>
+                                                <tr class="even pointer">
+                                                    <td>1</td>
+                                                    <td>总经理</td>
+                                                    <td>XX</td>
+                                                    <td class="text-center">
+                                                        <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                    </td>
+                                                </tr>
+                                                <tr class="even pointer">
+                                                    <td>1</td>
+                                                    <td>总经理</td>
+                                                    <td>XX</td>
+                                                    <td class="text-center">
+                                                        <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                    </td>
+                                                </tr>
+                                                <tr class="even pointer">
+                                                    <td>1</td>
+                                                    <td>总经理</td>
+                                                    <td>XX</td>
+                                                    <td class="text-center">
+                                                        <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                    </td>
+                                                </tr>
+                                                <tr class="even pointer">
+                                                    <td>1</td>
+                                                    <td>总经理</td>
+                                                    <td>XX</td>
+                                                    <td class="text-center">
+                                                        <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                    </td>
+                                                </tr>
+                                                <tr class="even pointer">
+                                                    <td>1</td>
+                                                    <td>总经理</td>
+                                                    <td>XX</td>
+                                                    <td class="text-center">
+                                                        <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                    </td>
+                                                </tr>
+                                                <tr class="even pointer">
+                                                    <td>1</td>
+                                                    <td>总经理</td>
+                                                    <td>XX</td>
+                                                    <td class="text-center">
+                                                        <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!--<div class=" fixed_height_360">-->
+                                            <!--<ul id="treeDemo1" class="ztree"></ul>-->
+                                        <!--</div>-->
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="x_panel">
+                                    <div class="x_title">
+                                        <h4 class="x_title_left">所含用户</h4>
+                                        <button class="btn btn-info btn-xs pull-right">添加用户</button>
+                                        <div class="clearfix"></div>
+                                    </div>
+
+                                    <div class="x_content">
+                                        <div class="table-responsive slim-scroll fixed_height_360">
+                                            <table class="table table-striped jambo_table bulk_action">
+                                                <thead>
+                                                <tr class="headings">
+                                                    <th class="">ID</th>
+                                                    <th class="">登陆ID</th>
+                                                    <th class="">用户名称</th>
+                                                    <th class="text-center">操作</th>
+                                                </tr>
+                                                </thead>
+
+                                                <tbody >
+                                                <tr class="even pointer">
+                                                    <td>1</td>
+                                                    <td>zhangsan</td>
+                                                    <td>张三</td>
+                                                    <td class="text-center">
+                                                        <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                    </td>
+                                                </tr>
+                                                <tr class="even pointer">
+                                                    <td>1</td>
+                                                    <td>zhangsan</td>
+                                                    <td>张三</td>
+                                                    <td class="text-center">
+                                                        <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                    </td>
+                                                </tr>
+                                                <tr class="even pointer">
+                                                    <td>1</td>
+                                                    <td>zhangsan</td>
+                                                    <td>张三</td>
+                                                    <td class="text-center">
+                                                        <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                    </td>
+                                                </tr>
+                                                <tr class="even pointer">
+                                                    <td>1</td>
+                                                    <td>zhangsan</td>
+                                                    <td>张三</td>
+                                                    <td class="text-center">
+                                                        <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                    </td>
+                                                </tr>
+                                                <tr class="even pointer">
+                                                    <td>1</td>
+                                                    <td>zhangsan</td>
+                                                    <td>张三</td>
+                                                    <td class="text-center">
+                                                        <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                    </td>
+                                                </tr>
+                                                <tr class="even pointer">
+                                                    <td>1</td>
+                                                    <td>zhangsan</td>
+                                                    <td>张三</td>
+                                                    <td class="text-center">
+                                                        <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                    </td>
+                                                </tr>
+                                                <tr class="even pointer">
+                                                    <td>1</td>
+                                                    <td>zhangsan</td>
+                                                    <td>张三</td>
+                                                    <td class="text-center">
+                                                        <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                    </td>
+                                                </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
 
                         </div>
@@ -127,6 +348,7 @@
 <script src="z-public/bootstrap/js/bootstrap.min.js"></script>
 <script src="z-public/gentelella/js/custom.min.js"></script>
 <script src="z-public/ztree/js/jquery.ztree.all.min.js"></script>
+<script src="z-public/jquery/jquery.slimscroll.min.js"></script>
 <script>
     $('#menu_toggle').on('click', function () {
         var ele = $(this).parent();
@@ -143,13 +365,48 @@
     var setting = {};
     // zTree 的数据属性，深入使用请参考 API 文档（zTreeNode 节点数据详解）
     var zNodes = [
-        {name:"test1", open:true, children:[
-            {name:"test1_1"}, {name:"test1_2"}]},
-        {name:"test2", open:true, children:[
-            {name:"test2_1"}, {name:"test2_2"}]}
+        {
+            name: "test1", open: true, children: [
+            {name: "test1_1"}, {name: "test1_2"}]
+        },
+        {
+            name: "test2", open: true, children: [
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_2"}
+        ]
+        }
     ];
-    $(document).ready(function(){
+    $(document).ready(function () {
         zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+        zTreeObj = $.fn.zTree.init($("#treeDemo1"), setting, zNodes);
+        zTreeObj = $.fn.zTree.init($("#treeDemo2"), setting, zNodes);
+
+        $('.slim-scroll').each(function () {
+            var $this = $(this);
+            $this.slimScroll({
+                height: $this.css('height') || 100,
+                railVisible: true
+            });
+        });
+
     });
 
 </script>

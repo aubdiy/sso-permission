@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SSO-Permission! | </title>
+
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="z-public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="z-public/gentelella/css/gentelella.min.css" rel="stylesheet">
+    <link href="z-public/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="z-public/ztree/css/zTreeStyle/zTreeStyle.css" rel="stylesheet">
+
+</head>
+
+<body class="nav-md footer_fixed">
+<div class="container body">
+    <div class="main_container">
+        <div class="col-md-3 left_col menu_fixed">
+            <div class="left_col scroll-view">
+                <div class="navbar nav_title" style="border: 0;">
+                    <a href="index.html" class="site_title"><i class="fa fa-university"></i> <span>SSO-Permission!</span></a>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <!-- menu profile quick info -->
+                <div class="profile">
+                    <div class="profile_pic">
+                        <img src="image/favicon.jpg" alt="..." class="img-circle profile_img">
+                    </div>
+                    <div class="profile_info">
+                        <span>欢迎,</span>
+                        <h2>xxx</h2>
+                        <!--<a id="menu_toggle"><i class="fa fa-bars"></i></a>-->
+                    </div>
+                </div>
+                <!-- /menu profile quick info -->
+
+                <br/>
+
+                <!-- sidebar menu -->
+                <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                    <div class="menu_section">
+                        <h3>&nbsp;</h3>
+                        <ul class="nav side-menu">
+                            <li><a href="user.html"><i class="fa fa-users"></i> 用户管理 </a></li>
+                        </ul>
+                        <ul class="nav side-menu">
+                            <li><a href="organization.html"><i class="fa fa-sitemap"></i> 组织管理 </a></li>
+                        </ul>
+                        <ul class="nav side-menu">
+                            <li><a href="role.html"><i class="fa fa-paw"></i> 角色管理 </a></li>
+                        </ul>
+                        <ul class="nav side-menu">
+                            <li><a href="resource.html"><i class="fa fa-gift"></i> 资源管理 </a></li>
+                        </ul>
+                        <ul class="nav side-menu">
+                            <li><a href="xSystem.html"><i class="fa fa-joomla"></i> 系统管理 </a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+
+                <div class="sidebar-footer hidden-small">
+                    <a class="pull-left" style="width:50%" data-toggle="tooltip" data-placement="top" title="设置">
+                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                    </a>
+                    <a class="pull-right" style="width:50%" data-toggle="tooltip" data-placement="top" title="退出">
+                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                    </a>
+                </div>
+                <!-- /menu footer buttons -->
+            </div>
+        </div>
+
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>资源管理</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_content">
+                            <div class="col-md-2 col-sm-12 col-xs-12">
+                                <div class="x_title">
+                                    <h4>系统信息</h4>
+                                </div>
+                                <ul id="treeDemo" class="ztree"></ul>
+                            </div>
+                            <div class="col-md-10 col-sm-12 col-xs-12">
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+
+                                    <form class="form-inline  form-label-left input_mask text-right" role="form">
+                                        <div class="form-group">
+                                            <label class="sr-only">资源名称</label>
+                                            <input type="text" class="form-control" placeholder="资源名称">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only">资源标识</label>
+                                            <input type="text" class="form-control" placeholder="资源标识">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only">资源URI</label>
+                                            <input type="text" class="form-control" placeholder="资源URI">
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only">状态</label>
+                                            <select class="form-control">
+                                                <option>全部</option>
+                                                <option>启用</option>
+                                                <option>停用</option>
+                                            </select>
+                                        </div>
+                                        <button type="button" class="btn btn-info btn-sm">查询</button>
+                                        <button type="button" class="btn btn-success btn-sm">新增</button>
+                                    </form>
+
+                                    <div class="space-2"></div>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped jambo_table bulk_action">
+                                            <thead>
+                                            <tr class="headings">
+                                                <th class="">ID</th>
+                                                <th class="">资源名称</th>
+                                                <th class="">资源标识</th>
+                                                <th class="">资源URI</th>
+                                                <th class="">状态</th>
+                                                <th class="">所属系统</th>
+                                                <th class="text-center">操作</th>
+                                            </tr>
+                                            </thead>
+
+                                            <tbody>
+                                            <tr class="even pointer">
+                                                <td>1</td>
+                                                <td>拓扑列表</td>
+                                                <td>topology-list</td>
+                                                <td>/aaa/bbb/ccc</td>
+                                                <td class=""><span class="badge badge-success">启用</span></td>
+                                                <td>匠心系统</td>
+                                                <td class="text-right">
+                                                    <button type="button" class="btn btn-warning btn-xs">修改</button>
+                                                    <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                </td>
+                                            </tr>
+                                            <tr class="even pointer">
+                                                <td>1</td>
+                                                <td>拓扑列表</td>
+                                                <td>topology-list</td>
+                                                <td>/aaa/bbb/ccc</td>
+                                                <td class=""><span class="badge badge-success">启用</span></td>
+                                                <td>匠心系统</td>
+                                                <td class="text-right">
+                                                    <button type="button" class="btn btn-warning btn-xs">修改</button>
+                                                    <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                </td>
+                                            </tr>
+                                            <tr class="even pointer">
+                                                <td>1</td>
+                                                <td>拓扑列表</td>
+                                                <td>topology-list</td>
+                                                <td>/aaa/bbb/ccc</td>
+                                                <td class=""><span class="badge badge-success">启用</span></td>
+                                                <td>匠心系统</td>
+                                                <td class="text-right">
+                                                    <button type="button" class="btn btn-warning btn-xs">修改</button>
+                                                    <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                </td>
+                                            </tr>
+                                            <tr class="even pointer">
+                                                <td>1</td>
+                                                <td>拓扑列表</td>
+                                                <td>topology-list</td>
+                                                <td>/aaa/bbb/ccc</td>
+                                                <td class=""><span class="badge badge-success">启用</span></td>
+                                                <td>匠心系统</td>
+                                                <td class="text-right">
+                                                    <button type="button" class="btn btn-warning btn-xs">修改</button>
+                                                    <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                </td>
+                                            </tr>
+                                            <tr class="even pointer">
+                                                <td>1</td>
+                                                <td>拓扑列表</td>
+                                                <td>topology-list</td>
+                                                <td>/aaa/bbb/ccc</td>
+                                                <td class=""><span class="badge badge-success">启用</span></td>
+                                                <td>匠心系统</td>
+                                                <td class="text-right">
+                                                    <button type="button" class="btn btn-warning btn-xs">修改</button>
+                                                    <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                </td>
+                                            </tr>
+                                            <tr class="even pointer">
+                                                <td>1</td>
+                                                <td>拓扑列表</td>
+                                                <td>topology-list</td>
+                                                <td>/aaa/bbb/ccc</td>
+                                                <td class=""><span class="badge badge-success">启用</span></td>
+                                                <td>匠心系统</td>
+                                                <td class="text-right">
+                                                    <button type="button" class="btn btn-warning btn-xs">修改</button>
+                                                    <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                </td>
+                                            </tr>
+                                            <tr class="even pointer">
+                                                <td>1</td>
+                                                <td>拓扑列表</td>
+                                                <td>topology-list</td>
+                                                <td>/aaa/bbb/ccc</td>
+                                                <td class=""><span class="badge badge-success">启用</span></td>
+                                                <td>匠心系统</td>
+                                                <td class="text-right">
+                                                    <button type="button" class="btn btn-warning btn-xs">修改</button>
+                                                    <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                                </td>
+                                            </tr>
+
+
+                                            </tbody>
+                                        </table>
+                                        <div>
+                                            <nav class="text-right">
+                                                <ul class="pagination">
+                                                    <li><span>&laquo;</span></li>
+                                                    <li><span>1</span></li>
+                                                    <li class="active"><span>2</span></li>
+                                                    <li><span>3</span></li>
+                                                    <li><span>4</span></li>
+                                                    <li><span>5</span></li>
+                                                    <li><span>&raquo;</span></li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /page content -->
+
+    <!-- footer content -->
+    <footer>
+        <div class="pull-left" style="margin-left: 230px;">
+            <span id="menu_toggle" style="cursor:pointer"><i class="fa fa-bars"></i></span>
+        </div>
+        <div class="pull-right">
+            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+        </div>
+        <div class="clearfix"></div>
+    </footer>
+    <!-- /footer content -->
+</div>
+</div>
+
+
+<script src="z-public/jquery/jquery.min.js"></script>
+<script src="z-public/bootstrap/js/bootstrap.min.js"></script>
+<script src="z-public/gentelella/js/custom.min.js"></script>
+<script src="z-public/ztree/js/jquery.ztree.all.min.js"></script>
+<script>
+    $('#menu_toggle').on('click', function () {
+        var ele = $(this).parent();
+        if (ele.attr('style') === 'margin-left: 230px;') {
+            ele.attr('style', 'margin-left: 70px;');
+        } else {
+            ele.attr('style', 'margin-left: 230px;');
+        }
+
+    });
+
+    var zTreeObj;
+    // zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
+    var setting = {};
+    // zTree 的数据属性，深入使用请参考 API 文档（zTreeNode 节点数据详解）
+    var zNodes = [
+        {
+            name: "test1", open: true, children: [
+            {name: "test1_1"}, {name: "test1_2"}]
+        },
+        {
+            name: "test2", open: true, children: [
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_1"},
+            {name: "test2_2"}
+        ]
+        }
+    ];
+    $(document).ready(function () {
+        zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+    });
+
+</script>
+
+</body>
+</html>

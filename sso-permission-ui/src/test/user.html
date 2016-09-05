@@ -49,16 +49,16 @@
                             <li><a href="user.html"><i class="fa fa-users"></i> 用户管理 </a></li>
                         </ul>
                         <ul class="nav side-menu">
-                            <li><a><i class="fa fa-sitemap"></i> 组织管理 </a></li>
+                            <li><a href="organization.html"><i class="fa fa-sitemap"></i> 组织管理 </a></li>
                         </ul>
                         <ul class="nav side-menu">
                             <li><a href="role.html"><i class="fa fa-paw"></i> 角色管理 </a></li>
                         </ul>
                         <ul class="nav side-menu">
-                            <li><a><i class="fa fa-gift"></i> 资源管理 </a></li>
+                            <li><a href="resource.html"><i class="fa fa-gift"></i> 资源管理 </a></li>
                         </ul>
                         <ul class="nav side-menu">
-                            <li><a href="system.html"><i class="fa fa-joomla"></i> 系统管理 </a></li>
+                            <li><a href="xSystem.html"><i class="fa fa-joomla"></i> 系统管理 </a></li>
                         </ul>
 
                     </div>
@@ -107,7 +107,7 @@
                                     </select>
                                 </div>
                                 <button type="button" class="btn btn-info btn-sm">查询</button>
-                                <button type="button" class="btn btn-success btn-sm">新增</button>
+                                <button id="userCreate" type="button" class="btn btn-success btn-sm">新增</button>
                             </form>
 
                             <div class="space-2"></div>
@@ -241,6 +241,7 @@
 
 <script src="z-public/jquery/jquery.min.js"></script>
 <script src="z-public/bootstrap/js/bootstrap.min.js"></script>
+<script src="z-public/bootstrap/js/bootbox.min.js"></script>
 <script src="z-public/gentelella/js/custom.min.js"></script>
 <script>
     $('#menu_toggle').on('click', function () {
@@ -251,6 +252,11 @@
             ele.attr('style', 'margin-left: 230px;');
         }
     });
+    $('#userCreate').on('click', function () {
+
+        bootbox.alert("BOOTBOX");
+    });
+
 
 </script>
 
